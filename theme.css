@@ -1,55 +1,3 @@
-/* @settings
-
-name: Encore
-id: encore-settings
-settings:
-  - 
-    id: theme-colours
-    title: Colour Theme
-    description: Add a splash of colour to Encore
-    type: class-select
-    allowEmpty: false
-    default: encore-theme
-    options:
-      - 
-        label: Encore
-        value: encore-theme
-      - 
-        label: Monochrome
-        value: encore-theme-monochrome
-      - 
-        label: One Dark (Atom)
-        value: encore-theme-atom
-      -
-        label: Dracula
-        value: encore-theme-dracula
-  -
-    id: shaded-title
-    title: Shaded Title
-    description: Wraps the title of the note in a box. This will expand to contain any frontmatter in the note
-    type: class-toggle
-  -
-    id: encore-coloured-tooltip
-    title: Coloured Tooltip
-    description: Make tooltips stand out much more by applying your theme colour to the border
-    type: class-toggle
-  -
-    id: encore-disable-clickability-fix
-    title: Disable Clickability Fix
-    description: Encore makes it easier to click the edge of a document by adding some invisible padding. May cause issues if you have content that exceeds the width of your page. No effect on mobile version.
-    type: class-toggle
-  -
-    id: encore-no-calendar
-    title: Disable Calendar Integration
-    description: Encore makes some changes to Calendar. Turn this on to keep the default look
-    type: class-toggle
-  -
-    id: encore-no-excalidraw
-    title: Disable Excalidraw Integration
-    description: Encore makes some changes to Excalidraw to integrate it better with Obsidian. Turn this on to revert to Excalidraw's default theme
-    type: class-toggle
-*/
-
 @charset "UTF-8";
 .mod-root .workspace-split.mod-horizontal > div:not(:first-of-type) {
   background-color: var(--background-primary);
@@ -685,6 +633,204 @@ body.encore-theme-debug.theme-light {
   --color-base-60: #fd0202;
 }
 
+.editor-colored-headers .HyperMD-header-1 {
+  color: var(--colored-header-one, #cf9a63);
+}
+
+.editor-colored-headers .HyperMD-header-2 {
+  color: var(--colored-header-two, #a1c77e);
+}
+
+.editor-colored-headers .HyperMD-header-3 {
+  color: var(--colored-header-three, #59b7c3);
+}
+
+.editor-colored-headers .HyperMD-header-4 {
+  color: var(--colored-header-four, #67a4d2);
+}
+
+.editor-colored-headers .HyperMD-header-5 {
+  color: var(--colored-header-five, #d77174);
+}
+
+.editor-colored-headers .HyperMD-header-6 {
+  color: var(--colored-header-six, #e3c27e);
+}
+
+.viewer-colored-headers .markdown-preview-view h1 {
+  color: var(--colored-header-one, #cf9a63);
+}
+
+.viewer-colored-headers .markdown-preview-view h2 {
+  color: var(--colored-header-two, #a1c77e);
+}
+
+.viewer-colored-headers .markdown-preview-view h3 {
+  color: var(--colored-header-three, #59b7c3);
+}
+
+.viewer-colored-headers .markdown-preview-view h4 {
+  color: var(--colored-header-four, #67a4d2);
+}
+
+.viewer-colored-headers .markdown-preview-view h5 {
+  color: var(--colored-header-five, #d77174);
+}
+
+.viewer-colored-headers .markdown-preview-view h6 {
+  color: var(--colored-header-six, #e3c27e);
+}
+
+.is-flashing {
+  background: transparent;
+}
+
+.is-flashing .nav-file-title {
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.05) 30%, rgba(255, 255, 255, 0.3) 50%, rgba(255, 255, 255, 0.05) 70%, rgba(255, 255, 255, 0.05) 100%);
+  animation: flashing 5s infinite;
+  animation-timing-function: linear;
+  background-size: 200px 100%;
+  /* --text-highlight-bg: var(--custom-accent); */
+}
+
+@keyframes flashing {
+  0% {
+    background-position: 0% 0;
+  }
+  100% {
+    background-position: 400px 0;
+  }
+}
+/* @settings
+name: Encore custom theme
+id: encore-settings
+settings:
+  - 
+    id: theme-colours
+    title: Colour Theme
+    description: Add a splash of colour to Encore
+    type: class-select
+    allowEmpty: false
+    default: encore-theme
+    options:
+      - 
+        label: Encore
+        value: encore-theme
+      - 
+        label: Monochrome
+        value: encore-theme-monochrome
+      - 
+        label: One Dark (Atom)
+        value: encore-theme-atom
+      -
+        label: Dracula
+        value: encore-theme-dracula
+  -
+    id: shaded-title
+    title: Shaded Title
+    description: Wraps the title of the note in a box. This will expand to contain any frontmatter in the note
+    type: class-toggle
+  -
+    id: encore-coloured-tooltip
+    title: Coloured Tooltip
+    description: Make tooltips stand out much more by applying your theme colour to the border
+    type: class-toggle
+  -
+    id: encore-disable-clickability-fix
+    title: Disable Clickability Fix
+    description: Encore makes it easier to click the edge of a document by adding some invisible padding. May cause issues if you have content that exceeds the width of your page. No effect on mobile version.
+    type: class-toggle
+  -
+    id: encore-no-calendar
+    title: Disable Calendar Integration
+    description: Encore makes some changes to Calendar. Turn this on to keep the default look
+    type: class-toggle
+  -
+    id: encore-no-excalidraw
+    title: Disable Excalidraw Integration
+    description: Encore makes some changes to Excalidraw to integrate it better with Obsidian. Turn this on to revert to Excalidraw's default theme
+    type: class-toggle
+  -
+    id: colored-headers
+    title: Colored headers
+    type: heading
+    level: 2
+  -
+    id: editor-colored-headers
+    title: Enable colored headers in the editing view
+    type: class-toggle
+  -
+    id: viewer-colored-headers
+    title: Enable colored headers in the reading view
+    type: class-toggle
+  -
+    id: colored-header-one
+    title: Header one
+    type: variable-color
+    opacity: false
+    format: hex
+    alt-format:
+      -
+        id: accent-rgb
+        format: rgb
+    default: '#cf9a63'
+  -
+    id: colored-header-two
+    title: Header two
+    type: variable-color
+    opacity: false
+    format: hex
+    alt-format:
+    -
+     id: accent-rgb
+     format: rgb
+    default: '#a1c77e'
+  -
+    id: colored-header-three
+    title: Header three
+    type: variable-color
+    opacity: false
+    format: hex
+    alt-format:
+    -
+      id: accent-rgb
+      format: rgb
+    default: '#59b7c3'
+  -
+    id: colored-header-four
+    title: Header four
+    type: variable-color
+    opacity: false
+    format: hex
+    alt-format:
+    -
+      id: accent-rgb
+      format: rgb
+    default: '#b9a1c7'
+  -
+    id: colored-header-five
+    title: Header five
+    type: variable-color
+    opacity: false
+    format: hex
+    alt-format:
+    -
+      id: accent-rgb
+      format: rgb
+    default: '#d77174'
+  -
+    id: colored-header-six
+    title: Header six
+    type: variable-color
+    opacity: false
+    format: hex
+    alt-format:
+    -
+      id: accent-rgb
+      format: rgb
+    default: '#e3c27e'
+  -
+*/
 :root {
   --corner-radius: 0.5rem;
 }

@@ -11,7 +11,139 @@
 @use "kanban.scss";
 @use "excalidraw.scss";
 @use "themes.scss";
+@use "editor.scss";
+@use "file-tree.scss";
 
+/* @settings
+name: Encore custom theme
+id: encore-settings
+settings:
+  - 
+    id: theme-colours
+    title: Colour Theme
+    description: Add a splash of colour to Encore
+    type: class-select
+    allowEmpty: false
+    default: encore-theme
+    options:
+      - 
+        label: Encore
+        value: encore-theme
+      - 
+        label: Monochrome
+        value: encore-theme-monochrome
+      - 
+        label: One Dark (Atom)
+        value: encore-theme-atom
+      -
+        label: Dracula
+        value: encore-theme-dracula
+  -
+    id: shaded-title
+    title: Shaded Title
+    description: Wraps the title of the note in a box. This will expand to contain any frontmatter in the note
+    type: class-toggle
+  -
+    id: encore-coloured-tooltip
+    title: Coloured Tooltip
+    description: Make tooltips stand out much more by applying your theme colour to the border
+    type: class-toggle
+  -
+    id: encore-disable-clickability-fix
+    title: Disable Clickability Fix
+    description: Encore makes it easier to click the edge of a document by adding some invisible padding. May cause issues if you have content that exceeds the width of your page. No effect on mobile version.
+    type: class-toggle
+  -
+    id: encore-no-calendar
+    title: Disable Calendar Integration
+    description: Encore makes some changes to Calendar. Turn this on to keep the default look
+    type: class-toggle
+  -
+    id: encore-no-excalidraw
+    title: Disable Excalidraw Integration
+    description: Encore makes some changes to Excalidraw to integrate it better with Obsidian. Turn this on to revert to Excalidraw's default theme
+    type: class-toggle
+  -
+    id: colored-headers
+    title: Colored headers
+    type: heading
+    level: 2
+  -
+    id: editor-colored-headers
+    title: Enable colored headers in the editing view
+    type: class-toggle
+  -
+    id: viewer-colored-headers
+    title: Enable colored headers in the reading view
+    type: class-toggle
+  -
+    id: colored-header-one
+    title: Header one
+    type: variable-color
+    opacity: false
+    format: hex
+    alt-format:
+      -
+        id: accent-rgb
+        format: rgb
+    default: '#cf9a63'
+  -
+    id: colored-header-two
+    title: Header two
+    type: variable-color
+    opacity: false
+    format: hex
+    alt-format:
+    -
+     id: accent-rgb
+     format: rgb
+    default: '#a1c77e'
+  -
+    id: colored-header-three
+    title: Header three
+    type: variable-color
+    opacity: false
+    format: hex
+    alt-format:
+    -
+      id: accent-rgb
+      format: rgb
+    default: '#59b7c3'
+  -
+    id: colored-header-four
+    title: Header four
+    type: variable-color
+    opacity: false
+    format: hex
+    alt-format:
+    -
+      id: accent-rgb
+      format: rgb
+    default: '#b9a1c7'
+  -
+    id: colored-header-five
+    title: Header five
+    type: variable-color
+    opacity: false
+    format: hex
+    alt-format:
+    -
+      id: accent-rgb
+      format: rgb
+    default: '#d77174'
+  -
+    id: colored-header-six
+    title: Header six
+    type: variable-color
+    opacity: false
+    format: hex
+    alt-format:
+    -
+      id: accent-rgb
+      format: rgb
+    default: '#e3c27e'
+  -
+*/
 :root {
 	--corner-radius: 0.5rem;
 }
@@ -22,13 +154,14 @@ body {
 	--text-on-accent: var(--color-base-00);
 	--hr-thickness: 1px;
 	--highlight-hue: 37;
-	
+
 	text-underline-offset: 2px;
-	
+
 	// Don't change these theme colours
 	&.theme-dark {
 		--hr-color: #ffffff90;
 	}
+
 	&.theme-light {
 		--hr-color: #00000090;
 	}
@@ -88,10 +221,12 @@ body {
 }
 
 body:not(.is-translucent) {
+
 	// Only one modal dimmer at once
 	.modal-bg {
 		opacity: 0.0;
 	}
+
 	// Blur modal background
 	.modal-container.mod-dim .modal-bg {
 		backdrop-filter: brightness(0.5) blur(5px);
@@ -125,6 +260,7 @@ body:not(.is-translucent) {
 // Better clickability fix
 body:not(.is-mobile):not(.encore-disable-clickability-fix) {
 	$oversize: 4rem;
+
 	.markdown-source-view.mod-cm6.is-readable-line-width .cm-content {
 		max-width: unset;
 		margin-left: -$oversize;
@@ -132,7 +268,7 @@ body:not(.is-mobile):not(.encore-disable-clickability-fix) {
 		margin-right: -$oversize;
 		padding-right: $oversize;
 	}
-	
+
 	.ͼ1 .cm-scroller {
 		overflow-x: hidden;
 	}
@@ -144,6 +280,7 @@ body.shaded-title {
 	.markdown-source-view.mod-cm6 .cm-hmd-frontmatter:last-child {
 		position: relative;
 	}
+
 	.markdown-source-view.mod-cm6 .cm-hmd-frontmatter:last-child::before {
 		content: "";
 		background-color: var(--background-secondary-alt);
@@ -157,6 +294,7 @@ body.shaded-title {
 		border-bottom-left-radius: 8px;
 		border-bottom-right-radius: 8px;
 	}
+
 	.inline-title {
 		background-color: var(--background-secondary-alt);
 		border-radius: 8px;
@@ -178,9 +316,15 @@ body.shaded-title {
 
 // Tooltip
 @keyframes tooltip-appear {
-	from {opacity: 0.0;}
-	to {opacity: 1.0;}
+	from {
+		opacity: 0.0;
+	}
+
+	to {
+		opacity: 1.0;
+	}
 }
+
 body>.tooltip {
 	--tooltip-edge-colour: var(--background-secondary-alt);
 	border: 1px solid var(--tooltip-edge-colour);
@@ -189,19 +333,24 @@ body>.tooltip {
 	animation: tooltip-appear 150ms ease-out !important;
 	padding: 6px 8px;
 	border-radius: 8px;
+
 	>.tooltip-arrow {
 		border-bottom-color: var(--tooltip-edge-colour);
 	}
+
 	&.mod-right>.tooltip-arrow {
 		border-right-color: var(--tooltip-edge-colour);
 	}
+
 	&.mod-left>.tooltip-arrow {
 		border-left-color: var(--tooltip-edge-colour);
 	}
+
 	&.mod-top>.tooltip-arrow {
 		border-top-color: var(--tooltip-edge-colour);
 	}
 }
+
 body.encore-coloured-tooltip>.tooltip {
 	--tooltip-edge-colour: var(--color-accent);
 }

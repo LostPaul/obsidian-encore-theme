@@ -1,0 +1,39 @@
+
+.editor-colored-headers .HyperMD-header-1 {
+    color: var(--colored-header-one, #cf9a63)
+}
+.editor-colored-headers .HyperMD-header-2 {
+    color: var(--colored-header-two, #a1c77e)
+}
+.editor-colored-headers .HyperMD-header-3 {
+    color: var(--colored-header-three, #59b7c3)
+}
+.editor-colored-headers .HyperMD-header-4 {
+    color: var(--colored-header-four, #67a4d2)
+}
+.editor-colored-headers .HyperMD-header-5 {
+    color: var(--colored-header-five, #d77174)
+}
+.editor-colored-headers .HyperMD-header-6 {
+    color: var(--colored-header-six, #e3c27e)
+}
+
+
+.viewer-colored-headers .markdown-preview-view h1 {
+    color: var(--colored-header-one, #cf9a63)
+}
+.viewer-colored-headers .markdown-preview-view h2 {
+    color: var(--colored-header-two, #a1c77e)
+}
+.viewer-colored-headers .markdown-preview-view h3 {
+    color: var(--colored-header-three, #59b7c3)
+}
+.viewer-colored-headers .markdown-preview-view h4 {
+    color: var(--colored-header-four, #67a4d2)
+}
+.viewer-colored-headers .markdown-preview-view h5 {
+    color: var(--colored-header-five, #d77174)
+}
+.viewer-colored-headers .markdown-preview-view h6 {
+    color: var(--colored-header-six, #e3c27e)
+}

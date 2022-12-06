@@ -1,0 +1,25 @@
+.is-flashing {
+    background: transparent;
+  }
+  
+  .is-flashing .nav-file-title {
+    background: linear-gradient(90deg, 
+        rgba(255, 255, 255, 0.05) 0%,
+        rgba(255, 255, 255, 0.05) 30%,
+        rgba(255, 255, 255, 0.3) 50%,
+        rgba(255, 255, 255, 0.05) 70%,
+        rgba(255, 255, 255, 0.05) 100%);
+    animation: flashing 5s infinite;
+    animation-timing-function: linear;
+    background-size: 200px 100%;
+    /* --text-highlight-bg: var(--custom-accent); */
+  }
+  
+  @keyframes flashing {
+    0% {
+        background-position: 0% 0;
+    }
+    100%{
+        background-position: 400px 0;
+    }
+  }

@@ -1,6 +1,7 @@
 /* @settings
 
-name: Encore
+
+name: Encore custom theme
 id: encore-settings
 settings:
   - 
@@ -48,4 +49,84 @@ settings:
     title: Disable Excalidraw Integration
     description: Encore makes some changes to Excalidraw to integrate it better with Obsidian. Turn this on to revert to Excalidraw's default theme
     type: class-toggle
+  -
+    id: colored-headers
+    title: Colored headers
+    type: heading
+    level: 2
+  -
+    id: editor-colored-headers
+    title: Enable colored headers in the editing view
+    type: class-toggle
+  -
+    id: viewer-colored-headers
+    title: Enable colored headers in the reading view
+    type: class-toggle-
+  -
+    id: colored-header-one
+    title: Header one
+    type: variable-color
+    opacity: false
+    format: hex
+    alt-format:
+      -
+        id: accent-rgb
+        format: rgb
+    default: '#cf9a63'
+  -
+    id: colored-header-two
+    title: Header two
+    type: variable-color
+    opacity: false
+    format: hex
+    alt-format:
+    -
+     id: accent-rgb
+     format: rgb
+    default: '#a1c77e'
+  -
+    id: colored-header-three
+    title: Header three
+    type: variable-color
+    opacity: false
+    format: hex
+    alt-format:
+    -
+      id: accent-rgb
+      format: rgb
+    default: '#59b7c3'
+  -
+    id: colored-header-four
+    title: Header four
+    type: variable-color
+    opacity: false
+    format: hex
+    alt-format:
+    -
+      id: accent-rgb
+      format: rgb
+    default: '#b9a1c7'
+  -
+    id: colored-header-five
+    title: Header five
+    type: variable-color
+    opacity: false
+    format: hex
+    alt-format:
+    -
+      id: accent-rgb
+      format: rgb
+    default: '#d77174'
+  -
+    id: colored-header-six
+    title: Header six
+    type: variable-color
+    opacity: false
+    format: hex
+    alt-format:
+    -
+      id: accent-rgb
+      format: rgb
+    default: '#e3c27e'
+  -
 */
