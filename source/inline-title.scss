@@ -1,3 +1,5 @@
 .inline-title {
-	--inline-title-color: var(--color-accent);
+	/* only use accent when colored title doesn't exist*/
+
+	--inline-title-color: var(--colored-title,var(--color-accent));
 }

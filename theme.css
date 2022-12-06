@@ -74,7 +74,8 @@
 }
 
 .inline-title {
-  --inline-title-color: var(--color-accent);
+  /* only use accent when colored title doesn't exist*/
+  --inline-title-color: var(--colored-title,var(--color-accent));
 }
 
 .is-translucent:not(.is-fullscreen) {
@@ -765,6 +766,17 @@ settings:
     title: Enable colored headers in the reading view
     description: If it doesn't update immediately try to restart Obsidian
     type: class-toggle
+  -
+    id: colored-title
+    title: Note title
+    type: variable-color
+    opacity: false
+    format: hex
+    alt-format:
+      -
+        id: accent-rgb
+        format: rgb
+    default: '#6cbaf4'
   -
     id: colored-header-one
     title: Header one

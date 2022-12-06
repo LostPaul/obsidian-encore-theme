@@ -63,6 +63,17 @@ settings:
     description: If it doesn't update immediately try to restart Obsidian
     type: class-toggle
   -
+    id: colored-title
+    title: Note title
+    type: variable-color
+    opacity: false
+    format: hex
+    alt-format:
+      -
+        id: accent-rgb
+        format: rgb
+    default: '#6cbaf4'
+  -
     id: colored-header-one
     title: Header one
     type: variable-color
