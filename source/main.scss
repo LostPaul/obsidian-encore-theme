@@ -71,10 +71,12 @@ settings:
   -
     id: editor-colored-headers
     title: Enable colored headers in the editing view
+    description: If it doesn't update immediately try to restart Obsidian
     type: class-toggle
   -
     id: viewer-colored-headers
     title: Enable colored headers in the reading view
+    description: If it doesn't update immediately try to restart Obsidian
     type: class-toggle
   -
     id: colored-header-one
