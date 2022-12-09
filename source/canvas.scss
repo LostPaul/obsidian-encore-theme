@@ -4,10 +4,21 @@
 .canvas-node-container {
     .markdown-embed-title {
         padding: 0;
+        font-size: 2rem;
+        display: flex;
+        justify-content: center;
+        background: none;
     }
 
     .markdown-embed-link {
         display: none;
     }
-
+    .markdown-embed {
+        margin-bottom: 0;
+    }
+    .markdown-preview-sizer .markdown-embed {
+        padding-left: 1rem;
+        padding-bottom: 0.30rem;
+        padding-top: 0.30rem;
+    }
 }

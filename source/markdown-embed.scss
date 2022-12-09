@@ -24,6 +24,7 @@
 
 .markdown-embed-link {
 	color: var(--text-muted);
+	margin-top: 0.7rem;
 }
 
 .markdown-embed-link:hover {
@@ -33,7 +34,10 @@
 .markdown-embed-content.markdown-embed-page {
 	padding: 1rem;
 	padding-bottom: 0;
+	padding-top: 2rem;
 	max-height: 50vh;
 	overflow: auto;
 }
-
+.markdown-embed-content {
+	padding-left: 1.5rem;
+}
