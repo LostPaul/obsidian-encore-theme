@@ -13,6 +13,7 @@
 @use "themes.scss";
 @use "editor.scss";
 @use "file-tree.scss";
+@use "canvas.scss";
 
 /* @settings
 name: Encore custom theme
@@ -38,6 +39,9 @@ settings:
       -
         label: Dracula
         value: encore-theme-dracula
+      -
+        label: Everforest
+        value: encore-theme-everforest
   -
     id: shaded-title
     title: Shaded Title
@@ -178,6 +182,10 @@ body {
 	&.theme-light {
 		--hr-color: #00000090;
 	}
+}
+.checkbox-container
+{
+    background-color: var(--interactive-before);
 }
 
 .cm-strikethrough {
@@ -366,4 +374,17 @@ body>.tooltip {
 
 body.encore-coloured-tooltip>.tooltip {
 	--tooltip-edge-colour: var(--color-accent);
+}
+.suggestion-item.is-selected
+{
+    background-color: var(--text-selection);
+}
+::selection
+{
+    background-color: var(--text-selection) ;
+}
+a,
+.cm-hmd-internal-link
+{
+    text-decoration: none ;
 }

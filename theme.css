@@ -52,7 +52,7 @@
   font-variant: var(--inline-title-variant);
   font-family: var(--inline-title-font);
   letter-spacing: -0.015em;
-  padding: 0.25em 1rem;
+  padding: 0.1em 1rem;
   color: var(--color-accent);
   background-color: var(--background-secondary-alt);
   white-space: break-spaces;
@@ -67,10 +67,16 @@
 }
 
 .markdown-embed-content.markdown-embed-page {
+  padding-top: 2rem;
   padding: 1rem;
   padding-bottom: 0;
   max-height: 50vh;
   overflow: auto;
+}
+
+.markdown-preview-sizer {
+  padding-top: 0.35rem;
+  padding-left: 0.35rem;
 }
 
 .inline-title {

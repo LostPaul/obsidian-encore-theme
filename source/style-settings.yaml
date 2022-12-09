@@ -22,6 +22,9 @@ settings:
       -
         label: Dracula
         value: encore-theme-dracula
+      -
+        label: Everforest
+        value: encore-theme-everforest
   -
     id: shaded-title
     title: Shaded Title
