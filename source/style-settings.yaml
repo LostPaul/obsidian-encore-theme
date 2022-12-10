@@ -51,6 +51,10 @@ settings:
     description: Encore makes some changes to Excalidraw to integrate it better with Obsidian. Turn this on to revert to Excalidraw's default theme
     type: class-toggle
   -
+    id: display-file-name-in-embed
+    title: Remove the name of a file in the embed title
+    type: class-toggle
+  -
     id: colored-headers
     title: Colored headers
     type: heading

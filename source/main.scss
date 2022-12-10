@@ -14,7 +14,8 @@
 @use "editor.scss";
 @use "file-tree.scss";
 @use "canvas.scss";
-
+@use "table.scss";
+@use "export-pdf.scss";
 /* @settings
 name: Encore custom theme
 id: encore-settings
@@ -66,6 +67,10 @@ settings:
     id: encore-no-excalidraw
     title: Disable Excalidraw Integration
     description: Encore makes some changes to Excalidraw to integrate it better with Obsidian. Turn this on to revert to Excalidraw's default theme
+    type: class-toggle
+  -
+    id: display-file-name-in-embed
+    title: Remove the name of a file in the embed title
     type: class-toggle
   -
     id: colored-headers

@@ -56,11 +56,16 @@
   color: var(--color-accent);
   background-color: var(--background-secondary-alt);
   white-space: break-spaces;
+  display: flex;
+  justify-content: center;
+}
+
+.markdown-embed-title:empty {
+  display: none;
 }
 
 .markdown-embed-link {
   color: var(--text-muted);
-  margin-top: 0.7rem;
 }
 
 .markdown-embed-link:hover {
@@ -76,9 +81,21 @@
 }
 
 .markdown-embed-content {
-  padding-left: 1.5rem;
+  padding-left: 1rem;
 }
 
+.markdown-embed-content ul {
+  margin-top: 0;
+  padding-top: 0;
+  padding-left: 0.3rem;
+}
+
+.markdown-embed-content p {
+  margin-block-start: 0.4em;
+  margin-block-end: 0.4em;
+}
+
+/* if */
 .inline-title {
   /* only use accent when colored title doesn't exist*/
   --inline-title-color: var(--colored-title,var(--color-accent));
@@ -796,8 +813,6 @@ body.encore-theme-everforest .cm-line.hr hr::after {
 .canvas-node-container .markdown-embed-title {
   padding: 0;
   font-size: 2rem;
-  display: flex;
-  justify-content: center;
   background: none;
 }
 .canvas-node-container .markdown-embed-link {
@@ -812,6 +827,43 @@ body.encore-theme-everforest .cm-line.hr hr::after {
   padding-top: 0.3rem;
 }
 
+.cm-embed-block table {
+  /* notion like table */
+  border-collapse: collapse;
+  box-sizing: border-box;
+  line-height: 1.5;
+  /* round corners */
+  border-radius: 0.5rem;
+}
+
+tr {
+  display: table-row;
+  border: 0;
+}
+
+td {
+  display: table-cell;
+  padding-left: 7px;
+  padding-right: 7px;
+  padding-top: 9px;
+  padding-bottom: 9px;
+}
+
+@media print {
+  .markdown-embed p,
+  .markdown-embed li,
+  .markdown-embed mjx-mtr {
+    color: #f6f6f6;
+  }
+  .markdown-embed-content {
+    padding-left: 2rem;
+  }
+  .markdown-embed-title {
+    background-color: #3d4453;
+    display: flex;
+    justify-content: center;
+  }
+}
 /* @settings
 name: Encore custom theme
 id: encore-settings
@@ -863,6 +915,10 @@ settings:
     id: encore-no-excalidraw
     title: Disable Excalidraw Integration
     description: Encore makes some changes to Excalidraw to integrate it better with Obsidian. Turn this on to revert to Excalidraw's default theme
+    type: class-toggle
+  -
+    id: display-file-name-in-embed
+    title: Remove the name of a file in the embed title
     type: class-toggle
   -
     id: colored-headers

@@ -1,0 +1,20 @@
+.cm-embed-block table {
+    /* notion like table */
+    border-collapse: collapse;
+    box-sizing: border-box;
+    line-height: 1.5;
+    /* round corners */
+    border-radius: 0.5rem;
+    
+}
+tr {
+    display: table-row;
+    border: 0;
+}
+td {
+    display: table-cell;
+    padding-left: 7px;
+    padding-right: 7px;
+    padding-top: 9px;
+    padding-bottom: 9px; 
+}

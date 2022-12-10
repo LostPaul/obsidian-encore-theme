@@ -1,0 +1,18 @@
+@media print {
+
+    .markdown-embed p,
+    .markdown-embed li,
+    .markdown-embed mjx-mtr {
+        color: #f6f6f6;
+    }
+
+    .markdown-embed-content {
+        padding-left: 2rem;
+    }
+
+    .markdown-embed-title {
+        background-color: #3d4453;
+        display: flex;
+        justify-content: center;
+    }
+}
