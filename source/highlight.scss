@@ -9,3 +9,10 @@
 	box-shadow: 0 0 10px hsla(var(--highlight-hue), 90%, 50%, 0.75);
 	
 }
+/* change the style of mark text with style tag*/ 
+mark[style] {
+	color: white;
+	outline: 0;
+	background-color: 0;
+	box-shadow: none
+}

@@ -151,14 +151,6 @@
   box-shadow: 0 0 10px hsla(var(--highlight-hue), 90%, 50%, 0.75);
 }
 
-/* change the style of mark text with style tag*/
-mark[style] {
-  color: white;
-  outline: 0;
-  background-color: 0;
-  box-shadow: none;
-}
-
 body {
   --lucide-x: url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cline x1='18' y1='6' x2='6' y2='18'%3E%3C/line%3E%3Cline x1='6' y1='6' x2='18' y2='18'%3E%3C/line%3E%3C/svg%3E");
   --lucide-minus: url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cline x1='5' y1='12' x2='19' y2='12'%3E%3C/line%3E%3C/svg%3E");
@@ -770,12 +762,12 @@ body.encore-theme-everforest .cm-line.hr hr::after {
 
 .editor-colored-headers .HyperMD-header-1,
 .viewer-colored-headers .markdown-preview-view h1 {
-  color: var(--colored-header-one, #cf9a63) !important;
+  color: var(--colored-header-one, #cf9a63);
 }
 
 .editor-colored-headers .HyperMD-header-2,
 .viewer-colored-headers .markdown-preview-view h2 {
-  color: var(--colored-header-two, #a1c77e) !important;
+  color: var(--colored-header-two, #a1c77e);
 }
 
 .editor-colored-headers .HyperMD-header-3,

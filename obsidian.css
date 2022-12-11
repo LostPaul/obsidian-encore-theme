@@ -9,7 +9,7 @@ settings:
     description: Add a splash of colour to Encore
     type: class-select
     allowEmpty: false
-    default: encore-theme
+    default: encore-theme-atom
     options:
       - 
         label: Encore

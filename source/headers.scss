@@ -1,11 +1,11 @@
 .editor-colored-headers .HyperMD-header-1,
 .viewer-colored-headers .markdown-preview-view h1 {
-    color: var(--colored-header-one, #cf9a63)
+    color: var(--colored-header-one, #cf9a63) !important;
 }
 
 .editor-colored-headers .HyperMD-header-2,
 .viewer-colored-headers .markdown-preview-view h2 {
-    color: var(--colored-header-two, #a1c77e)
+    color: var(--colored-header-two, #a1c77e) !important;
 }
 
 .editor-colored-headers .HyperMD-header-3,
