@@ -1,0 +1,22 @@
+/* links to other notes */
+.internal-link, .cm-hmd-internal-link span {
+    text-decoration: none;
+
+}
+/* only remove underline from links */
+.cm-link .cm-underline {
+    text-decoration: none !important;
+}
+.cm-hmd-internal-link:not(.cm-header) span {
+    text-decoration: none !important;
+}
+.internal-link{
+    text-decoration: none !important;
+}
+// only remove underline from links that are not headers
+/*
+div[data-heading] {
+     add underline to headers  
+    background-color: white;
+}
+*/

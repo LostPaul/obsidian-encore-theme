@@ -10,3 +10,4 @@ package-lock.json
 
 # Dev build folder (for symbolic link)
 themes/
+theme.css

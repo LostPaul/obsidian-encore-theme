@@ -16,6 +16,7 @@
 @use "canvas.scss";
 @use "table.scss";
 @use "export-pdf.scss";
+@use "links.scss";
 /* @settings
 name: Encore custom theme
 id: encore-settings
@@ -387,9 +388,4 @@ body.encore-coloured-tooltip>.tooltip {
 ::selection
 {
     background-color: var(--text-selection) ;
-}
-a,
-.cm-hmd-internal-link
-{
-    text-decoration: none ;
 }
