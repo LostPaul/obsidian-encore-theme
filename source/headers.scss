@@ -1,29 +1,69 @@
-.editor-colored-headers .HyperMD-header-1,
-.viewer-colored-headers .markdown-preview-view h1 {
-    color: var(--colored-header-one, #cf9a63) !important;
+.HyperMD-header-1,
+.HyperMD-header-2,
+.HyperMD-header-3,
+.HyperMD-header-4,
+.HyperMD-header-5,
+.HyperMD-header-6 {
+    margin-bottom: 0.2rem !important;
+    color: initial !important;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: initial !important;
 }
 
-.editor-colored-headers .HyperMD-header-2,
-.viewer-colored-headers .markdown-preview-view h2 {
-    color: var(--colored-header-two, #a1c77e) !important;
+.editor-colored-headers .HyperMD-header-1::before,
+.viewer-colored-headers .markdown-preview-view h1::before,
+.editor-colored-headers .HyperMD-header-2::before,
+.viewer-colored-headers .markdown-preview-view h2::before,
+.editor-colored-headers .HyperMD-header-3::before,
+.viewer-colored-headers .markdown-preview-view h3::before,
+.editor-colored-headers .HyperMD-header-4::before,
+.viewer-colored-headers .markdown-preview-view h4::before,
+.editor-colored-headers .HyperMD-header-5::before,
+.viewer-colored-headers .markdown-preview-view h5::before,
+.editor-colored-headers .HyperMD-header-6::before,
+.viewer-colored-headers .markdown-preview-view h6::before {
+    flex-shrink: 0;
+    flex-grow: 0;
+    position: relative;
+    top: 4px;
+    content: " ";
+    display: inline-block;
+    width: 3px;
+    height: calc(1.4em - 8px);
+    border-radius: var(--radius-m);
+    margin-right: 0.3rem;
+    cursor: text;
 }
-
-.editor-colored-headers .HyperMD-header-3,
-.viewer-colored-headers .markdown-preview-view h3 {
-    color: var(--colored-header-three, #59b7c3)
+.editor-colored-headers .HyperMD-header-1::before,
+.viewer-colored-headers .markdown-preview-view h1::before {
+    background-color: var(--h1-color);
 }
-
-.editor-colored-headers .HyperMD-header-4,
-.viewer-colored-headers .markdown-preview-view h4 {
-    color: var(--colored-header-four, #67a4d2)
+.editor-colored-headers .HyperMD-header-2::before,
+.viewer-colored-headers .markdown-preview-view h2::before {
+    background-color: var(--h2-color);
 }
-
-.editor-colored-headers .HyperMD-header-5,
-.viewer-colored-headers .markdown-preview-view h5 {
-    color: var(--colored-header-five, #d77174)
+.editor-colored-headers .HyperMD-header-3::before,
+.viewer-colored-headers .markdown-preview-view h3::before {
+    background-color: var(--h3-color);
 }
-
-.editor-colored-headers .HyperMD-header-6,
-.viewer-colored-headers .markdown-preview-view h6 {
-    color: var(--colored-header-six, #a8f58c)
+.editor-colored-headers .HyperMD-header-4::before,
+.viewer-colored-headers .markdown-preview-view h4::before {
+    background-color: var(--h4-color);
+}
+.editor-colored-headers .HyperMD-header-5::before,
+.viewer-colored-headers .markdown-preview-view h5::before {
+    background-color: var(--h5-color);
+}
+.editor-colored-headers .HyperMD-header-6::before,
+.viewer-colored-headers .markdown-preview-view h6::before {
+    background-color: var(--h6-color);
+}
+.obsidian-banner-title::before {
+    display: none !important;
 }
