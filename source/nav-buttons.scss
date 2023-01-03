@@ -1,0 +1,50 @@
+.nav-buttons-container {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.nav-action-button[aria-label="New note"] {
+    order: 0;
+}
+.nav-action-button[aria-label="New folder"] {
+    order: 1
+}
+.nav-action-button[aria-label="New diagram"] {
+    order: 2;
+}
+.nav-action-button[aria-label="Change sort order"] {
+    order: 3;
+}
+.nav-action-button[aria-label="Collapse all"],
+.nav-action-button[aria-label="Expand all"] {
+    order: 4;
+}
+
+body:not(.is-mobile):not(.CTA-BTN-disable) .workspace-leaf-content[data-type="file-explorer"] .nav-header .nav-buttons-container .clickable-icon.nav-action-button:first-of-type {
+    background-color: var(--interactive-accent);
+    color: var(--text-on-accent);
+    box-shadow: var(--input-shadow);
+    border-radius: var(--button-radius);
+    width: 100px;
+    padding: var(--size-2-3);
+}
+
+body.theme-dark:not(.is-mobile):not(.CTA-BTN-disable) .workspace-leaf-content[data-type="file-explorer"] .nav-header .nav-buttons-container .clickable-icon.nav-action-button:first-of-type {
+    --input-shadow: none;
+}
+
+
+body:not(.is-mobile):not(.CTA-BTN-disable) .workspace-leaf-content[data-type="file-explorer"] .nav-header .nav-buttons-container .clickable-icon.nav-action-button:first-of-type:hover {
+    background-color: var(--interactive-accent-hover);
+}
+
+body:not(.is-mobile):not(.CTA-BTN-disable) .workspace-leaf-content[data-type="file-explorer"] .nav-header .nav-buttons-container .clickable-icon.nav-action-button:first-of-type::after {
+    content: "New Note";
+    font-size: var(--font-ui-small);
+    color: rgb(255, 255, 255);
+    margin-left: 0.3rem;
+}
+
+body:not(.is-mobile):not(.CTA-BTN-disable) .workspace-leaf-content[data-type="file-explorer"] .nav-header .nav-buttons-container .clickable-icon.nav-action-button:first-of-type {
+    color: rgb(255, 255, 255);
+}
