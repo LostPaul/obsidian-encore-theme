@@ -60,6 +60,10 @@
   justify-content: center;
 }
 
+.remove-file-name-in-embed .markdown-embed-title {
+  display: none;
+}
+
 .markdown-embed-title:empty {
   display: none;
 }
@@ -224,9 +228,6 @@ body:not(.is-mobile) .modal.mod-sidebar-layout .community-modal-sidebar:last-chi
 body:not(.is-mobile) .modal.mod-sidebar-layout .community-modal-sidebar:last-child .community-modal-controls {
   padding-top: 1em;
   background-color: var(--background-secondary-alt);
-}
-body:not(.is-mobile) .modal.mod-sidebar-layout .community-modal-info {
-  margin-left: 287px;
 }
 body:not(.is-mobile) .modal.mod-sidebar-layout .modal-setting-nav-bar {
   background-color: var(--background-secondary-alt);
@@ -574,6 +575,7 @@ body.encore-theme-atom.theme-dark {
   --color-base-50: #4f586b;
   --color-base-70: #abb2bf;
   --color-base-100: #ced2da;
+  --line-active-bg: rgba(255, 255, 255, 0.04);
   --color-red: #e06c75;
   --color-green-rgb: 224, 108, 117;
   --color-green: #98c379;
@@ -596,6 +598,7 @@ body.encore-theme-atom.theme-dark {
   --workspace-background-translucent: #272b34ab;
 }
 body.encore-theme-atom.theme-light {
+  --line-active-bg: rgba(0, 0, 0, 0.035);
   --color-base-00: #fafafa;
   --color-base-05: #ced2da;
   --color-base-20: #eaebee;
@@ -872,6 +875,30 @@ td {
     justify-content: center;
   }
 }
+/* links to other notes */
+.internal-link, .cm-hmd-internal-link span {
+  text-decoration: none;
+}
+
+/* only remove underline from links */
+.cm-link .cm-underline {
+  text-decoration: none !important;
+}
+
+.cm-hmd-internal-link:not(.cm-header) span {
+  text-decoration: none !important;
+}
+
+.internal-link {
+  text-decoration: none !important;
+}
+
+/*
+div[data-heading] {
+     add underline to headers  
+    background-color: white;
+}
+*/
 /* @settings
 name: Encore custom theme
 id: encore-settings
@@ -925,7 +952,7 @@ settings:
     description: Encore makes some changes to Excalidraw to integrate it better with Obsidian. Turn this on to revert to Excalidraw's default theme
     type: class-toggle
   -
-    id: display-file-name-in-embed
+    id: remove-file-name-in-embed
     title: Remove the name of a file in the embed title
     type: class-toggle
   -
@@ -1197,7 +1224,7 @@ body.encore-coloured-tooltip > .tooltip {
   background-color: var(--text-selection);
 }
 
-a,
-.cm-hmd-internal-link {
-  text-decoration: none;
+body:not(.line-active-disable) .markdown-source-view .cm-scroller .cm-line.cm-active {
+  background-color: var(--line-active-bg);
+  border-radius: var(--radius-s);
 }

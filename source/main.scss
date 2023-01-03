@@ -70,7 +70,7 @@ settings:
     description: Encore makes some changes to Excalidraw to integrate it better with Obsidian. Turn this on to revert to Excalidraw's default theme
     type: class-toggle
   -
-    id: display-file-name-in-embed
+    id: remove-file-name-in-embed
     title: Remove the name of a file in the embed title
     type: class-toggle
   -
@@ -388,4 +388,9 @@ body.encore-coloured-tooltip>.tooltip {
 ::selection
 {
     background-color: var(--text-selection) ;
+}
+
+body:not(.line-active-disable) .markdown-source-view .cm-scroller .cm-line.cm-active {
+  background-color: var(--line-active-bg);
+  border-radius: var(--radius-s);
 }

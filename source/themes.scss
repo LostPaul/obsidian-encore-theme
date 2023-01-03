@@ -139,6 +139,7 @@ body {
 			--color-base-50: #4f586b; // Headings, bullets, checked items
 			--color-base-70: #abb2bf; // Dim text
 			--color-base-100: #ced2da; // Text
+			--line-active-bg: rgba(255, 255, 255, 0.04);
 
 			--color-red: #e06c75;
 			--color-green-rgb: 224, 108, 117;
@@ -166,6 +167,7 @@ body {
 		}
 
 		&.theme-light {
+			--line-active-bg: rgba(0, 0, 0, 0.035);
 			--color-base-00: #fafafa; // Main background
 			--color-base-05: #ced2da; // Window title & embedded note title
 			--color-base-20: #eaebee; // Alt background
