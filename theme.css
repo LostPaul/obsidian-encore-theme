@@ -885,6 +885,10 @@ h6 {
   padding-bottom: 0.3rem;
   padding-top: 0.3rem;
 }
+.canvas-node-container .markdown-source-view .markdown-embed,
+.canvas-node-container .markdown-embed {
+  border-radius: 0 !important;
+}
 
 .cm-embed-block table {
   /* notion like table */
